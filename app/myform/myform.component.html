@@ -1,0 +1,21 @@
+
+<form (ngSubmit)="onSubmit()">
+  <ion-item>
+    <ion-label >Size</ion-label>
+    <ion-input type="number" id="size" #Inputsize></ion-input> 
+  </ion-item>
+  <ion-button (click)="checksize(Inputsize.value)">розмір</ion-button>
+
+  <ion-item *ngFor = "let item in vec1;let i=index">
+    <ion-label>Vector1</ion-label>
+    <ion-input type="number" id="{{i}}" ></ion-input>
+  </ion-item>
+  <ion-item *ngFor = "let item in vec2;let i=index">
+    <ion-label>Vector2</ion-label>
+    <ion-input type="number" id="vec2"></ion-input>
+  </ion-item>
+
+  
+
+  <ion-button type="submit">отправить</ion-button>
+</form>
